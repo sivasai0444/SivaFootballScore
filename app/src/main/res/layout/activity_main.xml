@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" >
+    <TextView
+        android:layout_weight="1"
+        android:text="Argentina"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_weight="1"
+        android:text="Barcelona"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/minus"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+
+
+        <TextView
+            android:layout_weight="1"
+            android:text="14"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="14"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/plus"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="4"
+        android:layout_height="250dp" >
+
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:text="2 Points"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:text="4 Points"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:text="6 Points"
+            android:layout_height="match_parent" />
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:text="8 Points"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    </LinearLayout>
