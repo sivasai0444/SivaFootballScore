@@ -76,11 +76,7 @@ class MainActivity : AppCompatActivity()
                 txt2?.setText(hh.toString() + "")
             }
         })
-
-
     }
-
-
     fun onRadioButtonClicked(view: View) {
         val checked = (view as RadioButton).isChecked
         when (view.getId()) {
