@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity()
     var a8:RadioButton? = null
     private var plus: ImageView? = null
     private var minus: ImageView? = null
-    var `val` = 0
+    var `value` = 0
     var checked = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity()
                     false
                 }
             })
-
         rg = findViewById(R.id.rg)
         a2 = findViewById(R.id.a2)
         a4 = findViewById(R.id.a4)
@@ -46,46 +45,41 @@ class MainActivity : AppCompatActivity()
         plus = findViewById(R.id.plus)
         plus?.setOnClickListener(View.OnClickListener { v: View? ->
             if (checked) {
-                var hh = (txt1?.getText().toString() + "").toInt()
-                hh = hh + `val`
-                txt1?.setText(hh.toString() + "")
+                var score =  (txt1?.getText().toString() + "").toInt()
+                score = score + `value`
+                txt1?.setText(score.toString() + "")
             } else {
-                var hh = (txt2?.getText().toString() + "").toInt()
-                hh = hh + `val`
-                txt2?.setText(hh.toString() + "")
+                var score = (txt2?.getText().toString() + "").toInt()
+                score = score + `value`
+                txt2?.setText(score.toString() + "")
             }
         })
-
-
-
         minus = findViewById(R.id.minus)
         minus?.setOnClickListener(View.OnClickListener { v: View? ->
             if (checked) {
-                var hh = (txt1?.getText().toString() + "").toInt()
-                hh = hh - `val`
-                if (hh < 0) {
-                    hh = 0
+                var score = (txt1?.getText().toString() + "").toInt()
+                score = score - `value`
+                if (score < 0) {
+                    score = 0
                 }
-                txt1?.setText(hh.toString() + "")
+                txt1?.setText(score.toString() + "")
             } else {
-                var hh = (txt2?.getText().toString() + "").toInt()
-                hh = hh - `val`
-                if (hh < 0) {
-                    hh = 0
+                var score = (txt2?.getText().toString() + "").toInt()
+                score = score - `value`
+                if (score < 0) {
+                    score = 0
                 }
-                txt2?.setText(hh.toString() + "")
+                txt2?.setText(score.toString() + "")
             }
         })
     }
     fun onRadioButtonClicked(view: View) {
         val checked = (view as RadioButton).isChecked
         when (view.getId()) {
-            R.id.a2 -> if (checked) `val` = 2
-            R.id.a4 -> if (checked) `val` = 4
-            R.id.a6 -> if (checked) `val` = 6
-            R.id.a8 -> if (checked) `val` = 8
+            R.id.a2 -> if (checked) `value` = 2
+            R.id.a4 -> if (checked) `value` = 4
+            R.id.a6 -> if (checked) `value` = 6
+            R.id.a8 -> if (checked) `value` = 8
         }
     }
-
-
 }
